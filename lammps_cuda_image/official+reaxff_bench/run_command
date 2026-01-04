@@ -1,0 +1,8 @@
+./lammps_reaxff_bench.sh \
+  -c "CPU-1|lmp_gpu -in" \
+  -c "CPU-4|mpirun -np 4 lmp_gpu -in" \
+  -c "CPU-8|mpirun -np 8 lmp_gpu -in" \
+  -c "CPU-12|mpirun -np 12 lmp_gpu -in" \
+  -c "GPU-1|lmp_gpu -sf gpu -pk gpu 1 -in" \
+  -c "GPU-MPI4|mpirun -np 4 lmp_gpu -sf gpu -pk gpu 1 -in" \
+  -c "GPU-MPI12|mpirun -np 12 lmp_gpu -sf gpu -pk gpu 1 -in"

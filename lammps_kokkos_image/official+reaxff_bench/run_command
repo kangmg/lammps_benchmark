@@ -1,0 +1,8 @@
+./lammps_reaxff_bench.sh \
+  -c "CPU-1|lmp_kokkos -in" \
+  -c "CPU-4|mpirun -np 4 lmp_kokkos -in" \
+  -c "CPU-8|mpirun -np 8 lmp_kokkos -in" \
+  -c "CPU-12|mpirun -np 12 lmp_kokkos -in" \
+  -c "KOKKOS-GPU-MPI1|mpirun -np 1 lmp_kokkos -k on g 1 -sf kk -pk kokkos neigh half newton on -in" \
+  -c "KOKKOS-GPU-MPI8|mpirun -np 8 lmp_kokkos -k on g 1 -sf kk -pk kokkos neigh half newton on -in" \
+  -c "KOKKOS-GPU-MPI12|mpirun -np 12 lmp_kokkos -k on g 1 -sf kk -pk kokkos neigh half newton on -in"
