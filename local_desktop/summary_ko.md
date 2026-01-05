@@ -1,6 +1,6 @@
 # LAMMPS 벤치마크
 
-[![English](https://img.shields.io/badge/lang-English-red.svg)](README.md)
+[![English](https://img.shields.io/badge/lang-English-red.svg)](summary.md)
 
 LAMMPS 분자동역학 시뮬레이션을 위한 GPU & MPI 가속 벤치마크
 
